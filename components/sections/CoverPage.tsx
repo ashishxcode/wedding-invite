@@ -52,11 +52,10 @@ export function CoverPage() {
             <p className="text-xl text-primary font-semibold">{INVITER.name}</p>
           </div>
 
-          {/* Venue & Contact */}
-          <address className="text-base text-secondary/70 leading-relaxed not-italic">
-            <p>{VENUE.primary.short}</p>
+          {/* Contact */}
+          <div className="text-base text-secondary/70 leading-relaxed not-italic">
             <p className="mt-2 font-medium">મો. {CONTACT.displayPhone}</p>
-          </address>
+          </div>
 
           <div className="text-secondary/40 mt-6">
             <ChevronDown

@@ -46,8 +46,7 @@ export function InvitationPage() {
 
         <address className="text-base text-secondary/70 not-italic mt-8">
           <p className="text-lg font-semibold text-primary mb-2">સ્થળ :</p>
-          <p className="font-medium">{VENUE.primary.address}</p>
-          <p className="font-medium">{VENUE.primary.city}</p>
+          <p className="font-medium">{VENUE.primary.short}</p>
         </address>
       </ScrollReveal>
     </Section>
