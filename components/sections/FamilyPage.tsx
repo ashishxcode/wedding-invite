@@ -21,6 +21,14 @@ export function FamilyPage() {
           </div>
         </div>
 
+         {/* Tahuko */}
+        <div className="px-2 mb-6">
+          <SectionLabel>ટહુકો</SectionLabel>
+          <p className="text-primary/80 text-base italic leading-8 whitespace-pre-line">
+            {TAHUKO}
+          </p>
+        </div>
+
         {/* Cousins */}
         <div className="mb-6">
           <SectionLabel>{FAMILY.cousins.label}</SectionLabel>
@@ -42,13 +50,7 @@ export function FamilyPage() {
           </div>
         </div>
 
-        {/* Tahuko */}
-        <div className="px-2 mt-6">
-          <SectionLabel>ટહુકો</SectionLabel>
-          <p className="text-primary/80 text-base italic leading-8 whitespace-pre-line">
-            {TAHUKO}
-          </p>
-        </div>
+       
       </ScrollReveal>
     </Section>
   );
