@@ -16,7 +16,7 @@ function AttendanceButton({
     <button
       type="button"
       onClick={onClick}
-      className={`flex-1 py-4 rounded-xl text-base font-medium flex items-center justify-center gap-2 transition-all ${
+      className={`flex-1 py-4 rounded-xl text-lg font-medium flex items-center justify-center gap-2 transition-all ${
         selected
           ? "bg-primary text-background shadow-md"
           : "bg-background text-secondary/70 border-2 border-primary/20"
@@ -45,9 +45,9 @@ export function RSVPForm() {
   };
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       <div>
-        <label className="block text-sm text-secondary/70 mb-2">
+        <label className="block text-base text-secondary/70 mb-3 font-medium">
           તમારું નામ
         </label>
         <input
@@ -55,16 +55,16 @@ export function RSVPForm() {
           placeholder="અહીં લખો..."
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full bg-background border-2 border-primary/20 p-4 text-lg focus:outline-none focus:border-primary/50 rounded-xl text-center text-primary placeholder:text-secondary/30 transition-colors"
+          className="w-full bg-background border-2 border-primary/20 p-4 text-xl focus:outline-none focus:border-primary/50 rounded-xl text-center text-primary placeholder:text-secondary/30 transition-colors"
           aria-label="તમારું નામ"
         />
       </div>
 
       <div>
-        <label className="block text-sm text-secondary/70 mb-2">
+        <label className="block text-base text-secondary/70 mb-3 font-medium">
           શું તમે આવી શકશો?
         </label>
-        <div className="flex gap-3" role="group" aria-label="હાજરી">
+        <div className="flex gap-4" role="group" aria-label="હાજરી">
           <AttendanceButton
             selected={attending}
             onClick={() => setAttending(true)}
@@ -83,7 +83,7 @@ export function RSVPForm() {
       <button
         onClick={handleSubmit}
         disabled={!name.trim()}
-        className="w-full py-4 bg-primary text-background text-base tracking-wide rounded-xl hover:bg-secondary transition-all disabled:opacity-40 disabled:cursor-not-allowed mt-2"
+        className="w-full py-5 bg-primary text-background text-lg tracking-wide rounded-xl hover:bg-secondary transition-all disabled:opacity-40 disabled:cursor-not-allowed mt-4 font-medium"
       >
         WhatsApp પર મોકલો
       </button>
