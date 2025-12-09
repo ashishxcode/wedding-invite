@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primitive Colors */
+  --c-ivory: #fffbf0;
+  --c-maroon: #6b0f0f;
+  --c-rust: #8b1a1a;
+  --c-beige: #fdf6e3;
+
+  /* Semantic Colors */
+  --background: var(--c-ivory);
+  --foreground: var(--c-maroon);
+  --primary: var(--c-maroon);
+  --secondary: var(--c-rust);
+  --accent: var(--c-beige);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-serif-gu: var(--font-noto-serif-gu), serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Keeping light theme for wedding invite as requested by design usually, but providing dark mode overrides if needed later */
+    /* For now, sticking to the design provided */
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--accent);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-serif-gu);
+  
+  /* Lattice/Checks Pattern for Body (Outside) */
+  background-image: 
+    linear-gradient(45deg, rgba(107, 15, 15, 0.05) 25%, transparent 25%, transparent 75%, rgba(107, 15, 15, 0.05) 75%, rgba(107, 15, 15, 0.05)),
+    linear-gradient(45deg, rgba(107, 15, 15, 0.05) 25%, transparent 25%, transparent 75%, rgba(107, 15, 15, 0.05) 75%, rgba(107, 15, 15, 0.05));
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.snap-container, .no-scrollbar {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.snap-container::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom Utilities */
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px rgba(107, 15, 15, 0.1);
+}
+
+.box-shadow-soft {
+  box-shadow: 0 10px 30px -10px rgba(107, 15, 15, 0.1);
+}
+
+
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
 }
