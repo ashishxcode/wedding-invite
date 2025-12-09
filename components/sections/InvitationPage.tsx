@@ -14,7 +14,10 @@ export function InvitationPage() {
       <ScrollReveal>
         <div className="text-primary/80 text-base leading-8">
           <p className="mb-1">સહર્ષ ખુશાલીની સાથે જણાવવાનું કે,</p>
-          <p>અમારા કુળદેવી શ્રી બ્રહ્માણી માંની અસીમ કૃપાથી</p>
+          <p>
+            અમારા કુળદેવી શ્રી બ્રહ્માણી માં, શ્રી ગોપાલ લાલ મહારાજ તથા શ્રી
+            ખોડીયાર માંની અસીમ કૃપાથી
+          </p>
         </div>
 
         <PersonCard {...COUPLE.groom} />

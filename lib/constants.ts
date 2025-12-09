@@ -57,7 +57,7 @@ export const SCHEDULE: DaySchedule[] = [
     venue: VENUE.primary.short,
     events: [
       { time: "સવારે ૮:૦૦ વાગ્યે", title: "રાંદલ પૂજા" },
-      { time: "સવારે ૧૦:૦૦ વાગ્યે", title: "મંડપ મુહૂર્ત" },
+      { time: "સવારે ૧૦:૦૦ વાગ્યે", title: "ગ્રહશાંતિ તથા મંડપ મુહૂર્ત" },
       { time: "બપોરે ૧૨:૦૦ વાગ્યે", title: "બપોરનું ભોજન" },
       { time: "બપોરે ૩:૦૦ વાગ્યે", title: "પીઠી / હલ્દી રસમ", highlight: true },
       { time: "સાંજે ૭:૦૦ વાગ્યે", title: "સાંજનું ભોજન" },
@@ -69,7 +69,7 @@ export const SCHEDULE: DaySchedule[] = [
     note: "(ગણતંત્ર દિવસ)",
     venue: VENUE.secondary.short,
     events: [
-      { time: "બપોરે ૨:૦૦ વાગ્યે", title: "બારાત પ્રસ્થાન", highlight: true },
+      { time: "બપોરે ૨:૦૦ વાગ્યે", title: "જાન પ્રસ્થાન", highlight: true },
       { time: "સાંજે ૪:૦૦ વાગ્યે", title: "હસ્તમેળાપ / લગ્ન", highlight: true },
       { time: "સાંજે ૭:૦૦ વાગ્યેથી", title: "ભોજન", highlight: true },
     ],
